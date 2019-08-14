@@ -1,0 +1,29 @@
+<!--pages/order/order.wxml-->
+<view class="tabs">
+  <view class="tab" bindtap="switchTab" data-index="{{0}}">
+    <text class="tab-text {{tabIndex === 0 && 'active'}}">全部</text>
+  </view>
+  <view class="tab" bindtap="switchTab" data-index="{{1}}">
+    <text class="tab-text {{tabIndex === 1 && 'active'}}">未完成</text>
+  </view>
+  <!-- <view class="tab" bindtap="switchTab" data-index="{{2}}">
+    <text class="tab-text {{tabIndex === 2 && 'active'}}">已完成</text>
+  </view> -->
+</view>
+
+<view class="order-list" wx:for="{{orderList}}" wx:key="{{index}}" bindtap="navToDetail">
+  <view class="order-list-header">
+    <text class="order-time">{{item.time}}</text>
+    <text class="order-status">{{item.status}}</text>
+  </view>
+  <view class="order-address">{{item.address}}</view>
+  <view>
+    <text>{{item.content}}</text>
+    <text>取件码：<text class="order-code">{{item.code}}</text>
+    </text>
+  </view>
+  <view class="order-list-footer">
+    <text class="order-price">¥{{item.price }}</text>
+    <text class="order-detail">查看详情</text>
+  </view>
+</view>

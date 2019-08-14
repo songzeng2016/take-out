@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/order/order",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "楼宇管家",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#4A4A4A",
+    "selectedColor": "#F36F52",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "icons/tabbar_order.png",
+        "selectedIconPath": "icons/tabbar_order_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "icons/tabbar_user.png",
+        "selectedIconPath": "icons/tabbar_user_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

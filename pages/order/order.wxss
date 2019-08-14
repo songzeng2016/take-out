@@ -1,0 +1,86 @@
+/* pages/order/order.wxss */
+
+page {
+  padding-bottom: 95rpx;
+  background-color: #F1F6FA;
+}
+
+.tabs {
+  display: flex;
+  height: 80rpx;
+  background-color: #fff;
+  border-top: 2rpx solid #ececec;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 26rpx;
+  border-bottom: 8rpx solid transparent;
+}
+
+.tab-text.active {
+  border-bottom-color: #f36f52;
+}
+
+.order-list {
+  margin-top: 16rpx;
+  padding: 0 0 32rpx 30rpx;
+  background-color: #fff;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.order-list > view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 32rpx;
+}
+
+.order-list-header {
+  height: 64rpx;
+  border-bottom: 2rpx solid #eeebe8;
+}
+
+.order-list-footer {
+  margin-top: 50rpx;
+}
+
+.order-time {
+  color: #999;
+  font-size: 22rpx;
+}
+
+.order-status, .order-code {
+  color: #f36f52;
+}
+
+.order-code {
+  font-size: 38rpx;
+}
+
+.order-address, .order-price {
+  color: #333;
+  font-weight: 500;
+}
+
+.order-address {
+  margin: 20rpx 0 10rpx;
+  font-size: 30rpx;
+}
+
+.order-price {
+  font-size: 32rpx;
+}

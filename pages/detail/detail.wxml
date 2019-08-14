@@ -1,0 +1,56 @@
+<!--pages/detail/detail.wxml-->
+<view class="card">
+  <view class="status-box">
+    <view class="status">
+      <text>取件码：3260</text>
+      <text>备货中</text>
+      <view>
+        <view>机器人可能多次为您送达</view>
+        <text>请注意电话通知</text>
+      </view>
+    </view>
+    <image class="detail-image" src="/images/detail_image.png"></image>
+  </view>
+  <view class="goods-list">
+    <text>排队顾客 3</text>
+    <text>预计送达时长 15分钟</text>
+  </view>
+</view>
+
+<view class="detail-title">订单详情</view>
+
+<view class="card">
+  <view class="goods-list">
+    <text>谷物水果套餐</text>
+    <text>¥75.0</text>
+    <text>x1</text>
+  </view> 
+  <view class="goods-list">
+    <text>谷物水果套餐</text>
+    <text>¥75.0</text>
+    <text>x1</text>
+  </view> 
+  <view class="goods-list">
+    <text>总计</text>
+    <text>¥175.0</text>
+  </view> 
+</view>
+
+<view class="card info">
+  <view class="info-list">
+    <text class="info-desc">订单编号：</text>
+    <text>5000009988493989009</text>
+  </view>
+  <view class="info-list">
+    <text class="info-desc">下单时间：</text>
+    <text>2019-08-10 11:00:08</text>
+  </view>
+  <view class="info-list">
+    <text class="info-desc">房间号：</text>
+    <text>509</text>
+  </view>
+  <view class="info-list">
+    <text class="info-desc">客服电话：</text>
+    <text>400-9090-9826</text>
+  </view>
+</view>
