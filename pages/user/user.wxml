@@ -3,6 +3,24 @@
   <open-data class="user-avatar" type="userAvatarUrl"></open-data>
   <open-data class="user-nickname" type="userNickName"></open-data>
 </view>
+
+<view class="info-box">
+  <navigator url="/pages/coupon/coupon">
+    <view>
+      <text class="info-number">2</text>
+      <text>个</text>
+    </view>
+    <text class="info-desc">红包</text>
+  </navigator>
+  <navigator url="/pages/order/order" open-type="switchTab">
+    <view>
+      <text class="info-number">9.63</text>
+      <text>分钟</text>
+    </view>
+    <text class="info-desc">累计节省时间</text>
+  </navigator>
+</view>
+
 <view class="nav-list-container">
   <navigator wx:for="{{navList}}" wx:key="{{index}}" url="{{item.path}}">
     <view class="nav-list">

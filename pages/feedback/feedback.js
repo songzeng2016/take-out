@@ -1,29 +1,11 @@
-// pages/user/user.js
-const navList = [
-  {
-    path: '/pages/coupon/coupon',
-    icon: '/icons/user_list_icon_coupon.svg',
-    text: '我的优惠券',
-  },
-  {
-    path: '/pages/policy/policy',
-    icon: '/icons/user_list_icon_policy.svg',
-    text: '赔付政策',
-  },
-  {
-    path: '/pages/feedback/feedback',
-    icon: '/icons/user_list_icon_feedback.svg',
-    text: '意见反馈',
-  },
-];
-
+// pages/feedback/feedback.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    navList,
+
   },
 
   /**

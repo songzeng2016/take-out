@@ -1,0 +1,4 @@
+<!--pages/feedback/feedback.wxml-->
+<textarea class="textarea" placeholder="填写意见"></textarea>
+
+<button class="submit-button">提交</button>

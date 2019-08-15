@@ -6,7 +6,9 @@
     "pages/user/user",
     "pages/detail/detail",
     "pages/payment/payment",
-    "pages/policy/policy"
+    "pages/policy/policy",
+    "pages/coupon/coupon",
+    "pages/feedback/feedback"
   ],
   "window": {
     "backgroundTextStyle": "light",

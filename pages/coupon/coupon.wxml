@@ -1,0 +1,19 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="tabs">
+  <view class="tab" bindtap="switchTab" data-index="{{0}}">
+    <text class="tab-text {{tabIndex === 0 && 'active'}}">未使用(0)</text>
+  </view>
+  <view class="tab" bindtap="switchTab" data-index="{{1}}">
+    <text class="tab-text {{tabIndex === 1 && 'active'}}">已使用</text>
+  </view>
+  <view class="tab" bindtap="switchTab" data-index="{{2}}">
+    <text class="tab-text {{tabIndex === 2 && 'active'}}">已失效</text>
+  </view>
+</view>
+
+<view class="no-coupon">
+  <view class="coupon-icon-box">
+    <image class="coupon-icon" src="/icons/coupon_icon.svg"></image>
+  </view>
+  <text>暂无优惠券</text>
+</view>

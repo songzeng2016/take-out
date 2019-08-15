@@ -1,0 +1,28 @@
+/* pages/coupon/coupon.wxss */
+
+.no-coupon, .coupon-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-coupon {
+  flex-direction: column;
+  height: 100%;
+  margin-top: 40%;
+  color: #666666;
+  font-size: 26rpx;
+}
+
+.coupon-icon-box {
+  width: 320rpx;
+  height: 320rpx;
+  margin-bottom: 36rpx;
+  background-color: #F8FCFF;
+  border-radius: 50%;
+}
+
+.coupon-icon {
+  width: 112rpx;
+  height: 90rpx;
+}

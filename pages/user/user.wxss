@@ -24,6 +24,37 @@
   color: #333333;
 }
 
+.info-box {
+  display: flex;
+  height: 160rpx;
+  margin-bottom: 32rpx;
+  background-color: #ffffff;
+}
+
+.info-box > navigator {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0287FF;
+  font-size: 28rpx;
+}
+
+.info-box > navigator:first-child {
+  border-right: 2rpx solid #D2DDE6;
+}
+
+.info-number {
+  font-size: 48rpx;
+}
+
+.info-desc {
+  margin-top: 6rpx;
+  color: #666666;
+  font-size: 24rpx;
+}
+
 .nav-list-container {
   background-color: #ffffff;
 }

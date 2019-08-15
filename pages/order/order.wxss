@@ -4,35 +4,6 @@ page {
   padding-bottom: 95rpx;
 }
 
-.tabs {
-  display: flex;
-  height: 80rpx;
-  background-color: #fff;
-  border-top: 2rpx solid #ececec;
-}
-
-.tab {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tab-text {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 10rpx;
-  box-sizing: border-box;
-  color: #333;
-  font-size: 26rpx;
-  border-bottom: 8rpx solid transparent;
-}
-
-.tab-text.active {
-  border-bottom-color: #0287FF;
-}
-
 .order-list {
   margin-top: 16rpx;
   padding: 0 0 32rpx 30rpx;
