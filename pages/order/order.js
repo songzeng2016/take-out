@@ -1,4 +1,7 @@
 // pages/order/order.js
+
+const fetch = require('../../common/js/fetch.js');
+
 const orderList = [
   {
     id: '',
@@ -54,7 +57,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const query = 'status_codes=20&status_codes=30&status_codes=80&offset=0';
+    fetch.queryOrders(query, res => {
+      console.log(res)
+    })
   },
 
   /**

@@ -1,9 +1,9 @@
 <!--pages/order/order.wxml-->
 <view class="tabs">
-  <view class="tab" bindtap="switchTab" data-index="{{0}}">
+  <view hover-class="hover" hover-stay-time="150" class="tab" bindtap="switchTab" data-index="{{0}}">
     <text class="tab-text {{tabIndex === 0 && 'active'}}">全部</text>
   </view>
-  <view class="tab" bindtap="switchTab" data-index="{{1}}">
+  <view hover-class="hover" hover-stay-time="150" class="tab" bindtap="switchTab" data-index="{{1}}">
     <text class="tab-text {{tabIndex === 1 && 'active'}}">未完成</text>
   </view>
 </view>
