@@ -54,3 +54,5 @@
     <text>400-9090-9826</text>
   </view>
 </view>
+
+<app-helper></app-helper>

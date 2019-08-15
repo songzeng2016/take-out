@@ -1,20 +1,13 @@
-// pages/user/user.js
-const navList = [
-  {
-    path: '/pages/coupon/coupon',
-    icon: '/icons/user_list_icon_coupon.svg',
-    text: '我的优惠券',
-  },
-  {
-    path: '/pages/policy/policy',
-    icon: '/icons/user_list_icon_policy.svg',
-    text: '赔付政策',
-  },
-  {
-    path: '/pages/coupon/coupon',
-    icon: '/icons/user_list_icon_feedback.svg',
-    text: '意见反馈',
-  },
+// pages/policy/policy.js
+
+const policyList = [
+  '低峰时间预计8分钟送达, 高峰时间预计15分钟送达, 超过预计送达时间5分钟即可赔付。',
+  '预计送达时间自订单提交关闭舱门后开始计时。',
+  '超过预计送达时间，赔付应收金额和订单损失扣款金额（需提供证明）',
+  '大额订单赔付上限为100元。',
+  '在线支付订单赔付款1-5个工作日到。',
+  '高峰时间：（11:00-14:00），低峰时间：除高峰外运营时间。',
+  '如遇极端恶劣天气或不可抗力等特殊情况不享受超时赔付。',
 ];
 
 Page({
@@ -23,7 +16,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navList,
+    policyList,
   },
 
   /**

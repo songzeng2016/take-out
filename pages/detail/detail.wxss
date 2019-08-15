@@ -1,7 +1,6 @@
 /* pages/detail/detail.wxss */
 page {
   padding: 32rpx 0;
-  background-color: #f7f4f2;
   box-sizing: border-box;
   color: #333333;
   font-size: 26rpx;

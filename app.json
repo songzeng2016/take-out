@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/user/user",
     "pages/detail/detail",
-    "pages/payment/payment"
+    "pages/payment/payment",
+    "pages/policy/policy"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,7 +16,7 @@
   },
   "tabBar": {
     "color": "#4A4A4A",
-    "selectedColor": "#F36F52",
+    "selectedColor": "#0287FF",
     "backgroundColor": "#ffffff",
     "borderStyle": "black",
     "list": [
@@ -27,7 +28,7 @@
       },
       {
         "pagePath": "pages/user/user",
-        "text": "用户",
+        "text": "我的",
         "iconPath": "icons/tabbar_user.png",
         "selectedIconPath": "icons/tabbar_user_selected.png"
       }

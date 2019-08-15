@@ -4,11 +4,13 @@
   <open-data class="user-nickname" type="userNickName"></open-data>
 </view>
 <view class="nav-list-container">
-  <view class="nav-list" wx:for="{{navList}}" wx:key="{{index}}">
-    <view class="nav-list-left">
-      <image class="nav-list-icon" src="{{item.icon}}"></image>
-      <text class="nav-list-text">{{item.text}}</text>
+  <navigator wx:for="{{navList}}" wx:key="{{index}}" url="{{item.path}}">
+    <view class="nav-list">
+      <view class="nav-list-left">
+        <image class="nav-list-icon" src="{{item.icon}}"></image>
+        <text class="nav-list-text">{{item.text}}</text>
+      </view>
+      <image class="nav-list-arrow" src="/icons/list_arrow_right.svg"></image>
     </view>
-    <image class="nav-list-arrow" src="/icons/list_arrow_right.svg"></image>
-  </view>
+  </navigator>
 </view>

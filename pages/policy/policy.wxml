@@ -1,0 +1,8 @@
+<!--pages/policy/policy.wxml-->
+<view class="policy-list">
+  <view class="policy-list-item" wx:for="{{policyList}}" wx:key="{{index}}">
+    <text class="policy-index">{{index + 1}}</text>
+    <text class="policy-text">{{item}}</text>
+  </view>
+</view>
+<view class="tips">最终解释权归YOGO所有</view>

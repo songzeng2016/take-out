@@ -1,38 +1,13 @@
 <!--pages/payment/payment.wxml-->
 <view class="body">
-  <view class="confirm-title">确认地址</view>
-  <view class="card goods-list">
-    <input class="room-input" placeholder="输入房间号"></input>
-    <image class="pencil-icon" src="/icons/pencil_icon.svg"></image>
-  </view>
-  <view class="detail-title">订单详情</view>
-  <view class="card">
-    <view class="goods-list">
-      <text>谷物水果套餐</text>
-      <text>¥75.0</text>
-      <text>x1</text>
-    </view>
-    <view class="goods-list">
-      <text>谷物水果套餐</text>
-      <text>¥75.0</text>
-      <text>x1</text>
-    </view>
-  </view>
-
-  <view class="card goods-list coupon-list">
-    <image class="coupon-icon" src="/icons/user_list_icon_coupon.svg"></image>
-    <text>优惠券 ></text>
-  </view>
-
-  <view class="detail-title">备注</view>
-
-  <view class="card">
-    <textarea class="textarea" placeholder="填写备注"></textarea>
+  <view class="fail-wrapper">
+    <image class="net-broken" src="/images/robot_net_broken.png"></image>
+    <text>网络连接失败，本次金额计入账单</text>
   </view>
 </view>
 
 <view class="card footer">
   <text class="footer-price">¥120.0</text>
-  <navigator class="footer-button" url="/pages/detail/detail">确定记账</navigator>
+  <navigator class="footer-button" url="/pages/detail/detail">去支付</navigator>
   <text class="footer-tips">确认消费金额计入房间总账</text>
 </view>

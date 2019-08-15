@@ -2,7 +2,6 @@
 
 page {
   padding-bottom: 95rpx;
-  background-color: #F1F6FA;
 }
 
 .tabs {
@@ -31,7 +30,7 @@ page {
 }
 
 .tab-text.active {
-  border-bottom-color: #f36f52;
+  border-bottom-color: #0287FF;
 }
 
 .order-list {
@@ -54,8 +53,15 @@ page {
   border-bottom: 2rpx solid #eeebe8;
 }
 
-.order-list-footer {
-  margin-top: 50rpx;
+.order-list-info {
+  margin: 26rpx 0;
+}
+
+.address-icon {
+  width: 28rpx;
+  height: 34rpx;
+  margin-right: 12rpx;
+  vertical-align: middle;
 }
 
 .order-time {
@@ -63,24 +69,27 @@ page {
   font-size: 22rpx;
 }
 
-.order-status, .order-code {
-  color: #f36f52;
-}
-
-.order-code {
-  font-size: 38rpx;
-}
-
-.order-address, .order-price {
-  color: #333;
-  font-weight: 500;
+.order-status {
+  color: #0287FF;
 }
 
 .order-address {
-  margin: 20rpx 0 10rpx;
-  font-size: 30rpx;
+  font-size: 28rpx;
 }
 
 .order-price {
-  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+  font-size: 38rpx;
+}
+
+.order-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 146rpx;
+  height: 48rpx;
+  margin-top: 30rpx;
+  border: 2rpx solid #AFAFAF;
+  border-radius: 4rpx;
 }

@@ -1,7 +1,4 @@
 /* pages/user/user.wxss */
-page {
-  background-color: #F1F6FA;
-}
 
 .user-info, .nav-list, .nav-list-left {
   display: flex;
@@ -39,7 +36,7 @@ page {
 }
 
 .nav-list:last-child {
-  border-bottom: none;
+  /* border-bottom: none; */
 }
 
 .nav-list-icon {

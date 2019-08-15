@@ -1,0 +1,5 @@
+<!--components/helper/helper.wxml-->
+<view class="helper">
+  <view class="button" bindtap="feedback">意见反馈</view>
+  <view class="button" bindtap="makePhoneCall">联系客服</view>
+</view>
