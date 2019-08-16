@@ -17,25 +17,27 @@
   </view>
 </view>
 
-<view class="detail-title">订单详情</view>
-
-<view class="card">
-  <view class="goods-list">
-    <text>谷物水果套餐</text>
-    <text>¥75.0</text>
-    <text>x1</text>
-  </view> 
-  <view class="goods-list">
-    <text>谷物水果套餐</text>
-    <text>¥75.0</text>
-    <text>x1</text>
-  </view> 
-  <view class="goods-list">
-    <text>总计</text>
-    <text>¥175.0</text>
-  </view> 
+<view class="detail-title">配送信息</view>
+<view class="card info">
+  <view class="info-list">
+    <text class="info-desc">收货地址：</text>
+    <text>宏慧 有个机器人 2F</text>
+  </view>
+  <view class="info-list">
+    <text class="info-desc">联系电话：</text>
+    <text>136 6808 0000</text>
+  </view>
+  <view class="info-list">
+    <text class="info-desc">配送机器人：</text>
+    <text>25号</text>
+  </view>
+  <view class="info-list">
+    <text class="info-desc">箱格信息：</text>
+    <text>3号箱</text>
+  </view>
 </view>
 
+<view class="detail-title">订单详情</view>
 <view class="card info">
   <view class="info-list">
     <text class="info-desc">订单编号：</text>
@@ -46,12 +48,8 @@
     <text>2019-08-10 11:00:08</text>
   </view>
   <view class="info-list">
-    <text class="info-desc">房间号：</text>
-    <text>509</text>
-  </view>
-  <view class="info-list">
-    <text class="info-desc">客服电话：</text>
-    <text>400-9090-9826</text>
+    <text class="info-desc">支付金额：</text>
+    <text>¥0.3</text>
   </view>
 </view>
 

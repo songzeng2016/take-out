@@ -8,20 +8,5 @@
   </view>
 </view>
 
-<view class="order-list" wx:for="{{orderList}}" wx:key="{{index}}" bindtap="navToDetail">
-  <view class="order-list-header">
-    <text class="order-time">{{item.time}}</text>
-    <text class="order-status">{{item.status}}</text>
-  </view>
-  <view class="order-list-info">
-    <view>
-      <image class="address-icon" src="/icons/address_icon.svg"></image>
-      <text class="order-address">宏慧 有个机器人 2F</text>
-    </view>
-    <text class="order-price">¥0.2</text>
-  </view>
-  <view class="order-list-footer">
-    <text class="order-price">136 6808 0000</text>
-    <text class="order-button">查看详情</text>
-  </view>
-</view>
+<order-list wx:for="{{orderList}}" wx:key="{{index}}" order="{{item}}" type="order" bindtap="navToDetail">
+</order-list>

@@ -1,0 +1,30 @@
+<!--components/order-list/order-list.wxml-->
+<view class="order-list">
+  <view class="order-list-header">
+    <text class="order-time">{{order.time}}</text>
+    <text class="order-status">{{orderStatusDesc[order.status]}}</text>
+  </view>
+  <view class="order-list-body">
+    <view>
+      <view>
+        <image class="address-icon" src="/icons/address_icon.svg"></image>
+        <text class="order-address">{{order.address}}</text>
+      </view>
+      <text class="order-phone">{{foo.phone(order.phone)}}</text>
+    </view>
+    <view class="body-right">
+      <text class="order-price {{type}}">¥{{order.price}}</text>
+      <text wx:if="{{type === 'order'}}" class="order-button">{{orderButtonDesc[order.status]}}</text>
+    </view>
+  </view>
+</view>
+
+<wxs module="foo">
+  var phone = function(phone) {
+    return phone;
+  };
+
+  module.exports = {
+    phone: phone,
+  }
+</wxs>

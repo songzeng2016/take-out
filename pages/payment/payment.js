@@ -1,11 +1,67 @@
 // pages/payment/payment.js
+
+const {
+  orderStatus
+} = require('../../common/js/config.js');
+
+const orderList = [
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
+    status: orderStatus.waitPay,
+    address: '宏慧 有个机器人 2F',
+    phone: '13668080000',
+    price: '0.2',
+  },
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
+    status: orderStatus.waitPay,
+    address: '宏慧 有个机器人 2F',
+    phone: '13668080000',
+    price: '0.2',
+  },
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
+    status: orderStatus.waitPay,
+    address: '宏慧 有个机器人 2F',
+    phone: '13668080000',
+    price: '0.2',
+  },
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
+    status: orderStatus.waitPay,
+    address: '宏慧 有个机器人 2F',
+    phone: '13668080000',
+    price: '0.2',
+  },
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
+    status: orderStatus.waitPay,
+    address: '宏慧 有个机器人 2F',
+    phone: '13668080000',
+    price: '0.2',
+  },
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
+    status: orderStatus.waitPay,
+    address: '宏慧 有个机器人 2F',
+    phone: '13668080000',
+    price: '0.2',
+  },
+];
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    orderList,
   },
 
   /**

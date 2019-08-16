@@ -1,10 +1,14 @@
 <!--pages/payment/payment.wxml-->
-<view class="body">
-  <view class="fail-wrapper">
+<scroll-view scroll-y class="body">
+  <block wx:if="{{orderList.length}}">
+    <order-list wx:for="{{orderList}}" wx:key="{{index}}" order="{{item}}" type="payment">
+    </order-list>
+  </block>
+  <view wx:else class="fail-wrapper">
     <image class="net-broken" src="/images/robot_net_broken.png"></image>
     <text>网络连接失败，本次金额计入账单</text>
   </view>
-</view>
+</scroll-view>
 
 <view class="card footer">
   <text class="footer-price">¥120.0</text>

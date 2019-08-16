@@ -60,5 +60,5 @@ page {
 
 .info-desc {
   display: inline-block;
-  width: 130rpx;
+  width: 150rpx;
 }

@@ -1,34 +1,59 @@
 // pages/order/order.js
 
 const fetch = require('../../common/js/fetch.js');
+const {
+  orderStatus
+} = require('../../common/js/config.js');
 
-const orderList = [
-  {
+const orderList = [{
     id: '',
     time: '2019-08-10 11:00:08',
-    status: '备货中',
+    status: orderStatus.delivery,
     address: '亚朵酒店 5F 509',
     content: '谷物水果套餐等 共2件商品',
     code: '3206',
     price: '120.0',
+    phone: '13668080000',
   },
   {
     id: '',
     time: '2019-08-10 11:00:08',
-    status: '备货中',
+    status: orderStatus.uncompleted,
     address: '亚朵酒店 5F 509',
     content: '谷物水果套餐等 共2件商品',
     code: '3206',
     price: '120.0',
+    phone: '13668080000',
   },
   {
     id: '',
     time: '2019-08-10 11:00:08',
-    status: '备货中',
+    status: orderStatus.completed,
     address: '亚朵酒店 5F 509',
     content: '谷物水果套餐等 共2件商品',
     code: '3206',
     price: '120.0',
+    phone: '13668080000',
+  },
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
+    status: orderStatus.completed,
+    address: '亚朵酒店 5F 509',
+    content: '谷物水果套餐等 共2件商品',
+    code: '3206',
+    price: '120.0',
+    phone: '13668080000',
+  },
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
+    status: orderStatus.waitPay,
+    address: '亚朵酒店 5F 509',
+    content: '谷物水果套餐等 共2件商品',
+    code: '3206',
+    price: '120.0',
+    phone: '13668080000',
   },
 ];
 
@@ -44,7 +69,9 @@ Page({
 
   switchTab(e) {
     const tabIndex = e.currentTarget.dataset.index;
-    this.setData({ tabIndex });
+    this.setData({
+      tabIndex
+    });
   },
 
   navToDetail() {
@@ -56,7 +83,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     const query = 'status_codes=20&status_codes=30&status_codes=80&offset=0';
     fetch.queryOrders(query, res => {
       console.log(res)
@@ -66,49 +93,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

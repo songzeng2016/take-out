@@ -10,7 +10,7 @@ page {
 
 .body {
   flex: 1;
-  padding-bottom: 30rpx;
+  /* padding-bottom: 30rpx; */
   overflow: auto;
 }
 
@@ -20,7 +20,7 @@ page {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 344rpx;
+  height: 328rpx;
   padding: 0 32rpx;
   background-color: #ffffff;
   border-top: 2rpx solid #E2E2E2;

@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp()
 
+const fetch = require('../../common/js/fetch.js');
+
 Page({
   data: {
     motto: 'Hello World',
@@ -45,10 +47,20 @@ Page({
   },
   getUserInfo: function(e) {
     console.log(e)
+    if (!e.detail.userInfo) {
+      return;
+    }
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  userLogin() {
+    wx.login({
+      success(res) {
+
+      }
     })
   }
 })
