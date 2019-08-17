@@ -4,8 +4,15 @@ const app = getApp()
 const fetch = require('../../common/js/fetch.js')
 
 Page({
-  data: {},
-  onLoad: function() {
+  data: {
+    scene: null,
+  },
+  onLoad: function(options) {
+    if (options.scene) {
+      const scene = decodeURIComponent(options.scene)
+      console.log('扫码传参：' + scene);
+      this.data.scene = scene;
+    }
     // TODO: 判断是否为扫码进入支付页面
     const user_token = wx.getStorageSync('user_token')
     if (user_token) {
@@ -58,8 +65,14 @@ Page({
   },
   navTo() {
     // TODO: 判断是否为扫码进入支付页面
-    wx.switchTab({
-      url: '/pages/order/order',
-    })
+    if (this.data.scene) {
+      wx.redirectTo({
+        url: '/pages/payment/payment?meteor=' + this.data.scene,
+      })
+    } else {
+      wx.switchTab({
+        url: '/pages/order/order',
+      })
+    }
   }
 })
