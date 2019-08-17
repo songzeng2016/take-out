@@ -66,8 +66,8 @@
   border-bottom: 2rpx solid #EEEBE8;
 }
 
-.nav-list:last-child {
-  /* border-bottom: none; */
+.nav-list-container > navigator:last-child > .nav-list {
+  border-bottom: none;
 }
 
 .nav-list-icon {

@@ -28,6 +28,26 @@ const orderList = [{
   {
     id: '',
     time: '2019-08-10 11:00:08',
+    status: orderStatus.uncompleted,
+    address: '亚朵酒店 5F 509',
+    content: '谷物水果套餐等 共2件商品',
+    code: '3206',
+    price: '120.0',
+    phone: '13668080000',
+  },
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
+    status: orderStatus.uncompleted,
+    address: '亚朵酒店 5F 509',
+    content: '谷物水果套餐等 共2件商品',
+    code: '3206',
+    price: '120.0',
+    phone: '13668080000',
+  },
+  {
+    id: '',
+    time: '2019-08-10 11:00:08',
     status: orderStatus.completed,
     address: '亚朵酒店 5F 509',
     content: '谷物水果套餐等 共2件商品',
@@ -65,13 +85,19 @@ Page({
   data: {
     tabIndex: 0,
     orderList,
+    offset: 0,
+    limit: 20,
+    hasMore: true,
   },
 
   switchTab(e) {
     const tabIndex = e.currentTarget.dataset.index;
     this.setData({
-      tabIndex
+      tabIndex,
     });
+
+    this.data.offset = 0;
+    this.queryOrders();
   },
 
   navToDetail() {
@@ -84,10 +110,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    const query = 'status_codes=20&status_codes=30&status_codes=80&offset=0';
-    fetch.queryOrders(query, res => {
-      console.log(res)
-    })
+    this.queryOrders();
+  },
+
+  queryOrders() {
+    const {offset, limit} = this.data;
+    let query;
+    if (this.data.tabIndex === 0) {
+      query = 'status_codes=20&status_codes=30&status_codes=80';
+    } else {
+      query = 'status_codes=20';
+    }
+    query += `&offset=${offset}&limit=${limit}`
+    fetch.queryOrders(query)
+      .then(res => {
+        console.log(res.data)
+        this.setData({
+          hasMore: res.data.count > (offset + 1) * limit
+        })
+      })
   },
 
   /**
@@ -129,7 +170,11 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-
+    if (!this.data.hasMore) {
+      return;
+    }
+    this.data.offset += 1;
+    this.queryOrders();
   },
 
   /**

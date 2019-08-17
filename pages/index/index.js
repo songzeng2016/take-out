@@ -1,66 +1,65 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
-const fetch = require('../../common/js/fetch.js');
+const fetch = require('../../common/js/fetch.js')
 
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
+  data: {},
+  onLoad: function() {
+    // TODO: 判断是否为扫码进入支付页面
+    const user_token = wx.getStorageSync('user_token')
+    if (user_token) {
+      app.globalData.userToken = user_token
+      this.navTo()
+      return
     }
+    this.login()
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    if (!e.detail.userInfo) {
-      return;
-    }
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
-  userLogin() {
+  /*
+   * 微信登陆，授权 userInfo 走全量
+   * 未授权 userInfo 只传 code
+   */
+  login() {
+    const that = this
     wx.login({
       success(res) {
-
+        const code = res.code
+        if (res.code) {
+          wx.getUserInfo({
+            success(res) {
+              const userInfo = res.userInfo
+              app.globalData.userInfo = userInfo
+              that.requestLogin({
+                code: code,
+                encryptedData: res.encryptedData,
+                iv: res.iv,
+                gender: userInfo.gender,
+                nickName: userInfo.nickName
+              })
+            },
+            fail() {
+              that.requestLogin({
+                code
+              })
+            }
+          })
+        }
       }
+    })
+  },
+  requestLogin(data) {
+    fetch.userLogin(data)
+      .then(() => {
+        this.navTo()
+      })
+      .catch(() => {
+        console.log('error')
+      })
+  },
+  navTo() {
+    // TODO: 判断是否为扫码进入支付页面
+    wx.switchTab({
+      url: '/pages/order/order',
     })
   }
 })

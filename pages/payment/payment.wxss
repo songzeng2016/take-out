@@ -26,8 +26,13 @@ page {
   border-top: 2rpx solid #E2E2E2;
 }
 
+.footer-price-desc {
+  color: #333333;
+  font-size: 28rpx;
+}
+
 .footer-price {
-  color: #F36F52;
+  color: #0287FF;
   font-size: 48rpx;
 }
 
@@ -37,14 +42,15 @@ page {
   align-items: center;
   width: 100%;
   height: 96rpx;
-  margin: 32rpx 0 14rpx 0;
+  margin: 24rpx 0 14rpx 0;
   background-color: #0287FF;
   border-radius: 12rpx;
   color: #FFFFFF;
 }
 
 .footer-tips {
-  color: #999999;
+  margin-top: 6rpx;
+  color: #0287FF;
   font-size: 24rpx;
 }
 

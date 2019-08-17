@@ -4,9 +4,11 @@
     <text class="tab-text {{tabIndex === 0 && 'active'}}">全部</text>
   </view>
   <view hover-class="hover" hover-stay-time="150" class="tab" bindtap="switchTab" data-index="{{1}}">
-    <text class="tab-text {{tabIndex === 1 && 'active'}}">未完成</text>
+    <text class="tab-text {{tabIndex === 1 && 'active'}}">待支付</text>
   </view>
 </view>
 
 <order-list wx:for="{{orderList}}" wx:key="{{index}}" order="{{item}}" type="order" bindtap="navToDetail">
 </order-list>
+
+<view wx:if="{{!hasMore}}" class="loading-tip-nomore"><text>没有更多订单啦</text></view>

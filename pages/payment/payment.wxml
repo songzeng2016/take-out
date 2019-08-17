@@ -11,7 +11,12 @@
 </scroll-view>
 
 <view class="card footer">
-  <text class="footer-price">¥120.0</text>
-  <navigator class="footer-button" url="/pages/detail/detail">去支付</navigator>
-  <text class="footer-tips">确认消费金额计入房间总账</text>
+  <block wx:if="{{orderList.length}}">
+    <text>
+      <text class="footer-price-desc">券后合计: </text>
+      <text class="footer-price">¥0.3</text>
+    </text>
+    <text class="footer-tips">优惠券: -¥0.3</text>
+  </block>
+  <button class="footer-button" bindtap="submit">{{orderList.length ? '去支付' : '继续'}}</button>
 </view>
