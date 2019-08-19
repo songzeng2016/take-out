@@ -15,7 +15,7 @@ page {
   display: flex;
   justify-content: space-between;
   padding: 40rpx;
-  border-bottom: 2rpx solid #EEEBE8;
+  /* border-bottom: 2rpx solid #EEEBE8; */
 }
 
 .status {
@@ -24,9 +24,31 @@ page {
   justify-content: space-between;
 }
 
+.status-title {
+  color: #333333;
+  font-size: 36rpx;
+}
+
+.status-content {
+  color: #999999;
+}
+
+.status-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160rpx;
+  height: 50rpx;
+  margin-right: 30rpx;
+  border: 2rpx solid #CECECE;
+  border-radius: 6rpx;
+  color: #666666;
+  font-size: 24rpx;
+}
+
 .detail-image {
-  width: 218rpx;
-  height: 232rpx;
+  width: 240rpx;
+  height: 252rpx;
 }
 
 .detail-title {
@@ -61,4 +83,8 @@ page {
 .info-desc {
   display: inline-block;
   width: 150rpx;
+}
+
+.info-phone {
+  color: #0287FF;
 }

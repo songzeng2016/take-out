@@ -12,15 +12,15 @@
 }
 
 .user-avatar {
-  width: 226rpx;
-  height: 226rpx;
+  width: 208rpx;
+  height: 208rpx;
   border-radius: 50%;
   overflow: hidden;
 }
 
 .user-nickname {
-  margin-top: 20rpx;
-  font-size: 32rpx;
+  margin-top: 28rpx;
+  font-size: 40rpx;
   color: #333333;
 }
 

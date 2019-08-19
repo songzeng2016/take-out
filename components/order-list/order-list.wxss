@@ -47,6 +47,7 @@
 
 .order-address {
   font-size: 28rpx;
+  vertical-align: middle;
 }
 
 .order-phone {

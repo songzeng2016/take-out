@@ -11,4 +11,4 @@
 <order-list wx:for="{{orderList}}" wx:key="{{index}}" order="{{item}}" type="order" bindtap="navToDetail">
 </order-list>
 
-<view wx:if="{{!hasMore}}" class="loading-tip-nomore"><text>没有更多订单啦</text></view>
+<!-- <view wx:if="{{!hasMore}}" class="loading-tip-nomore"><text>没有更多订单啦</text></view> -->

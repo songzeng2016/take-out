@@ -68,7 +68,12 @@ Component({
     },
     _propertyChange: function (newVal, oldVal) {
 
-    }
+    },
+    navToFeedback() {
+      wx.navigateTo({
+        url: '/pages/feedback/feedback',
+      })
+    },
   }
 
 })

@@ -14,7 +14,8 @@
     </view>
     <view class="body-right">
       <text class="order-price {{type}}">¥{{order.price}}</text>
-      <text wx:if="{{type === 'order'}}" class="order-button">{{orderButtonDesc[order.status]}}</text>
+      <!-- <text wx:if="{{type === 'order'}}" class="order-button">{{orderButtonDesc[order.status]}}</text> -->
+      <text wx:if="{{type === 'order'}}" class="order-button" catchtap="navToFeedback">意见反馈</text>
     </view>
   </view>
 </view>

@@ -8,6 +8,18 @@ Page({
 
   },
 
+  feedback: function () {
+    wx.navigateTo({
+      url: '/pages/feedback/feedback',
+    });
+  },
+  
+  makePhoneCall() {
+    wx.makePhoneCall({
+      phoneNumber: '136 6808 0000',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

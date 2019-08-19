@@ -15,6 +15,11 @@ const navList = [
     icon: '/icons/user_list_icon_feedback.svg',
     text: '意见反馈',
   },
+  {
+    path: '/pages/payment/payment',
+    icon: '/icons/user_list_icon_feedback.svg',
+    text: '支付页面',
+  },
 ];
 
 Page({
