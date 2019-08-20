@@ -1,0 +1,34 @@
+/* pages/swiper/swiper.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.tabs {
+  position: static;
+  display: flex;
+  height: 100rpx;
+  background: #999;
+}
+
+.tabs-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs-item.active {
+  background: red;
+}
+
+.swiper {
+  flex: 1;
+  background: #aaa;
+}
+
+.scroll-view {
+  height: 100%;
+}

@@ -1,0 +1,56 @@
+<!--pages/swiper/swiper.wxml-->
+<view class="tabs">
+  <view wx:for="{{tabs}}" wx:key="{{index}}" class="tabs-item {{item.active && 'active'}}" bindtap="switchTab" data-index="{{item.index}}">{{item.text}}</view>
+</view>
+
+<swiper class="swiper" current="{{currentIndex}}" bindchange="swiperChange">
+  <swiper-item class="swiper-item">
+    <scroll-view class="scroll-view" scroll-y>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+      <view>aaaaaa</view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item class="swiper-item">
+    <scroll-view class="scroll-view">swiper-b</scroll-view>
+  </swiper-item>
+</swiper>
